@@ -5,7 +5,7 @@
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: process.environ.get("FRBDB"),
+    apiKey: "AIzaSyDYI-l8T7XMOg0uyA6kYh_pwsMKIe69E2w",
     authDomain: "sac-election.firebaseapp.com",
     projectId: "sac-election",
     databaseURL: "https://sac-election.firebaseio.com",

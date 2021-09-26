@@ -74,12 +74,16 @@ function renderElectionCandidates(election ){
     button.setAttribute("class","col");
     button.setAttribute("data-aos","zoom-in");
     button.setAttribute("data-aos-delay","100");
-    button.setAttribute("test-align-center");
     let  addbutton = document.createElement("div");
     addbutton.setAttribute("class","addbutton");
     let  tb = document.createElement("a");
     tb.setAttribute("id","ss"+election.election.name);
-    tb.setAttribute("id","ss"+election.election.name);
+    tb.setAttribute("href","#ss");
+    tb.setAttribute("class","btn-buy");
+    tb.setAttribute("onclick","add_candidate(this.id)");
+    addbutton.appendChild(tb);
+    button.appendChild(addbutton);
+    container.appendChild(button);
     console.log(container);
     return container;
 }
@@ -97,8 +101,9 @@ function renderDoc(elections){
         e.appendChild(br);
         let x = document.createElement("canvas");
         x.setAttribute("id","graph"+i);
-        x.setAttribute("width","130");
-        x.setAttribute("height","130");
+        x.setAttribute("align","center");
+        x.setAttribute("width",$(window).width/2 +"");
+        x.setAttribute("height","400");
         e.appendChild(x);
     }
 
@@ -106,7 +111,8 @@ function renderDoc(elections){
     
 }
 function makeGraph(election,index){
-    var ctx = document.getElementById('graph'+i).getContext('2d');
+
+    var ctx = document.getElementById('graph'+index).getContext('2d');
     var myChart = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -134,22 +140,27 @@ function makeGraph(election,index){
             }]
         },
         options: {
+            responsive: false,
             scales: {
-                y: {
-                    beginAtZero: true
-                }
+                yAxes: [{
+                    ticks:{
+                        beginAtZero: true
+                    }
+                }]
             }
         }
     });
-    for(var i=0; i< election.election.candidates.lenght; i++){
-        myChart.labels.append(election.election.candidates[i].name);
-        myChart.datasets.data.append(election.election.candidates[i].votes);
+    for(var i=0; i< election.candidates.length; i++){
+        myChart.data.labels.push(election.candidates[i].name);
+        myChart.data.datasets[0].data.push(election.candidates[i].votes);
     }
-
+    myChart.update();
+    myChart.render();
 }
 function makeallGraph(elections){
+    console.log(Object.keys(elections).length);
     for( var i =0; i< Object.keys(elections).length; i++){
-        makeGraph(election[i],i);
+        makeGraph(elections[i].election,i);
     }
 }
 
