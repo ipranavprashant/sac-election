@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Nunito", sans-serif;
 }
 
+.highlight {
+  background-color: yellow; 
+}
+
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -2034,4 +2038,11 @@ section {
   font-size: 13px;
   color: #012970;
 }
+<<<<<<< HEAD:public/assets/css/style.css
+.addbutton {
+  text-align: center;
+  padding-top: 250px;
+}
+=======
 
+>>>>>>> 0316943f21e6297de48330d3c4d34d2814c689ee:assets/css/style.css
