@@ -38,6 +38,11 @@
     <script defer src="/__/firebase/9.1.0/firebase-storage-compat.js"></script>
     <script defer src="/__/firebase/9.1.0/firebase-analytics-compat.js"></script>
     <script defer src="/__/firebase/9.1.0/firebase-remote-config-compat.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/ui/5.0.0/firebase-ui-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.0/firebase-firestore-compat.js"></script>
+    
     
 </head>
 
@@ -93,7 +98,7 @@
               <ul>
                 <li>Chemical Engineering</li>
               </ul>
-              <a id="gs" href="#gs" class="btn-buy" onclick="voteGS()">Vote</a>
+              <a id="gs1" href="#gs" class="btn-buy" onclick="voteGS(this.id);" onclick="update_fields();">Vote</a>
             </div>
           </div>
 
@@ -104,7 +109,7 @@
               <ul>
                 <li>Electrical and Electronics Engineering</li>
               </ul>
-              <a id="gs" href="#gs" class="btn-buy" onclick="voteGS()">Vote</a>
+              <a id="gs2" href="#gs" class="btn-buy" onclick="voteGS(this.id);">Vote</a>
             </div>
           </div>
 
@@ -115,7 +120,7 @@
               <ul>
                 <li>Mechanical Engineering</li>
               </ul>
-              <a id="gs" href="#gs" class="btn-buy" onclick="voteGS()">Vote</a>
+              <a id="gs3" href="#gs" class="btn-buy" onclick="voteGS(this.id);">Vote</a>
             </div>
           </div>
 
@@ -352,6 +357,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script src="app.js"></script>
+
+
+    <!--********************************-->
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyASGk2VsvJY39KxIEk7aaJKtmyNG_fbpuM",
+  authDomain: "sac-elections-5852c.firebaseapp.com",
+  projectId: "sac-elections-5852c",
+  storageBucket: "sac-elections-5852c.appspot.com",
+  messagingSenderId: "616925625510",
+  appId: "1:616925625510:web:40fa57e4fee59877b14867",
+  measurementId: "G-V62HBHM6CG"
+}; 
+
+    firebase.initializeApp(firebaseConfig);
+    let cloudDB = firebase.firestore();
+</script>
+    
+
 
 </body>
 
