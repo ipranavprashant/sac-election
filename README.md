@@ -1,3 +1,3 @@
 # sac-election
 
-A solution for conducting elections, with a clean UI. 
+A secure solution for conducting elections, with a clean UI. 
