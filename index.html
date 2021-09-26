@@ -27,6 +27,22 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+  <script defer src="/__/firebase/9.1.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.1.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.1.0/firebase-performance-compat.js"></script>
+    
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+
 </head>
 <body>
 
@@ -45,7 +61,7 @@
           <li><a class="nav-link scrollto" href="#values">Candidates</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
           <!--<li><a class="getstarted scrollto" href="#about">Vote</a></li>-->
-          <li><a class="getstarted scrollto" href="#about">Admin</a></li>
+          <li><a class="getstarted scrollto" href="admin.html">Admin</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -63,10 +79,11 @@
           <h2 data-aos="fade-up" data-aos-delay="400">National Institute of Technology Calicut</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a href="#" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center" onclick="googleLogin()">
                 <span>Vote</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
+
             </div>
           </div>
         </div>
@@ -233,30 +250,31 @@
           <p>Contact Us</p>
         </header>
 
-        <div class="row gy-4 justify-content-center">
+        <div class="row justify-content-center">
 
-          <div class="col-lg-6">
+          <div class="row">
 
-            <div class="row gy-4 justify-content-center">
-              <div class="col-md-6">
+            <div class="row">
+              <div class="col">
                 <div class="info-box">
                   <i class="bi bi-geo-alt"></i>
                   <h3>Address</h3>
                   <p>Calicut Mukkam Road,<br>Kattangal, Kerala 673601</p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col">
                 <div class="info-box">
                   <i class="bi bi-telephone"></i>
                   <h3>Call Us</h3>
                   <p>0495 228 6106<br>0495 228 6514</p>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col">
                 <div class="info-box">
                   <i class="bi bi-envelope"></i>
                   <h3>Email Us</h3>
                   <p>sacelection@nitc.ac.in</p>
+                  <p>sac@nitc.ac.in</p>
                 </div>
               </div>
             </div>
@@ -293,6 +311,9 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  
+  <script src="app.js"></script>
 
 </body>
 
